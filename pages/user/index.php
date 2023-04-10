@@ -17,9 +17,11 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($data_user as $user) : ?>
+    <?php
+    $no = 1;
+    foreach ($data_user as $user) : ?>
     <tr>
-      <td><?php echo $user['id_user'] ?></td>
+      <td><?= $no++ ?></td>
       <td><?php echo $user['nama_user'] ?></td>
       <td><?php echo $user['username_user'] ?></td>
       <td><?php echo $user['keterangan_user'] ?></td>
