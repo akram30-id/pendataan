@@ -17,6 +17,10 @@ if (!isset($_SESSION['user'])) {
   <meta name="description" content="Aplikasi Pendataan Warga">
   <meta name="author" content="Murti Ayu Wijayanti">
   <link rel="icon" href="../../../favicon.ico">
+  
+  <!-- jquery autocomplete -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
   <title>Aplikasi Pendataan Warga</title>
 

@@ -69,9 +69,16 @@
     <!-- Lightbox -->
     <script src="../../assets/lib/lightbox/js/lightbox.min.js"></script>
 
+    <!-- JQuery Auto-Complete -->
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
     <?php if (isset($chart)) { ?>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src=<?= $chart ?> type="module"></script>
+    <?php } ?>
+
+    <?php if (isset($ajax)) { ?>
+      <script src=<?= $ajax ?> type="module"></script>
     <?php } ?>
   </body>
 </html>
