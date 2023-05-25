@@ -2,9 +2,14 @@
 include('../../config/koneksi.php');
 
 // hitung warga
-$query_warga = "SELECT COUNT(*) AS total FROM warga";
+$query_warga = "SELECT COUNT(*) AS total FROM `warga` WHERE is_alive=1;";
 $hasil_warga = mysqli_query($db, $query_warga);
 $jumlah_warga = mysqli_fetch_assoc($hasil_warga);
+
+// hitung warga meninggal
+$getMeninggal = "SELECT COUNT(*) AS total FROM warga WHERE is_alive=0";
+$hasil_meninggal = mysqli_query($db, $getMeninggal);
+$jumlah_meninggal = mysqli_fetch_assoc($hasil_meninggal);
 
 // hitung kartu keluarga
 $query_kartu_keluarga = "SELECT COUNT(*) AS total FROM kartu_keluarga";

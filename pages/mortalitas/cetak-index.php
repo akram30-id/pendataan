@@ -1,6 +1,7 @@
 <?php
 require_once("../../assets/lib/fpdf/fpdf.php");
 require_once("../../config/koneksi.php");
+require_once("../../config/env.php");
 
 class PDF extends FPDF
 {
@@ -8,16 +9,16 @@ class PDF extends FPDF
     function Header()
     {
         // Logo
-        $this->Image('../../assets/img/logo-jakbar.jpg', 20, 10);
+        $this->Image('../../assets/img/logo-nias.png', 20, 10);
 
         // Arial bold 15
         $this->SetFont('Times', 'B', 15);
         // Move to the right
         // $this->Cell(60);
         // Title
-        $this->Cell(308, 8, 'PENGURUS RT. 003 RW 016', 0, 1, 'C');
-        $this->Cell(308, 8, 'KEL. TOMANG, KEC. GROGOL PETAMBURAN', 0, 1, 'C');
-        $this->Cell(308, 8, 'JAKARTA BARAT', 0, 1, 'C');
+        $this->Cell(308, 8, 'PEMERINTAH KABUPATEN NIAS UTARA', 0, 1, 'C');
+        $this->Cell(308, 8, 'KECAMATAN LAHEWA TIMUR', 0, 1, 'C');
+        $this->Cell(308, 8, 'DESA TETEHOSI SOROWI', 0, 1, 'C');
         // Line break
         $this->Ln(5);
 
@@ -38,7 +39,7 @@ class PDF extends FPDF
         $this->cell(70, 7, 'NIK', 1, 0, 'C');
         $this->cell(85, 7, 'NAMA WARGA', 1, 0, 'C');
         $this->cell(45, 7, 'TGL. MENINGGAL', 1, 0, 'C');
-        $this->cell(98, 7, 'LOKASI PEMAKAMAN', 1, 0, 'C');
+        $this->cell(98, 7, 'LOKASI PEMAKAMAN', 1, 1, 'C');
     }
 
     // Page footer
@@ -76,8 +77,8 @@ foreach ($data_mortalitas as $mortalitas) {
     $pdf->cell(10, 7, $nomor++ . '.', 1, 0, 'C');
     $pdf->cell(70, 7, strtoupper($mortalitas['nik_warga']), 1, 0, 'C');
     $pdf->cell(85, 7, strtoupper($mortalitas['nama_warga']), 1, 0, 'C');
-    $pdf->cell(45, 7, strtoupper($mortalitas['tgl_kematian']), 1, 0, 'C');
-    $pdf->cell(98, 7, strtoupper($mortalitas['lokasi_pemakaman']), 1, 0, 'C');
+    $pdf->cell(45, 7, strtoupper(date('d', strtotime($mortalitas['tgl_kematian'])) . " " . month(date('n', strtotime($mortalitas['tgl_kematian']))) . " " . date('Y', strtotime($mortalitas['tgl_kematian']))), 1, 0, 'C');
+    $pdf->cell(98, 7, strtoupper($mortalitas['lokasi_pemakaman']), 1, 1, 'C');
 }
 
 // $pdf->Ln(2);

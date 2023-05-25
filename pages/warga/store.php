@@ -10,6 +10,7 @@ include('../../config/koneksi.php');
 
 // ambil data dari form
 $nik_warga = htmlspecialchars($_POST['nik_warga']);
+$password = md5(htmlspecialchars($_POST['nik_warga']));
 $nama_warga = htmlspecialchars($_POST['nama_warga']);
 $tempat_lahir_warga = htmlspecialchars($_POST['tempat_lahir_warga']);
 $tanggal_lahir_warga = htmlspecialchars($_POST['tanggal_lahir_warga']);
@@ -35,7 +36,7 @@ $id_user = $_SESSION['user']['id_user'];
 
 // masukkan ke database
 
-$query = "INSERT INTO warga (id_warga, nik_warga, nama_warga, tempat_lahir_warga, tanggal_lahir_warga, jenis_kelamin_warga, alamat_ktp_warga, alamat_warga, desa_kelurahan_warga, kecamatan_warga, kabupaten_kota_warga, provinsi_warga, negara_warga, rt_warga, rw_warga, agama_warga, pendidikan_terakhir_warga, pekerjaan_warga, status_perkawinan_warga, status_warga, id_user, created_at, updated_at) VALUES (NULL, '$nik_warga', '$nama_warga', '$tempat_lahir_warga', '$tanggal_lahir_warga', '$jenis_kelamin_warga', '$alamat_ktp_warga', '$alamat_warga', '$desa_kelurahan_warga', '$kecamatan_warga', '$kabupaten_kota_warga', '$provinsi_warga', '$negara_warga', '$rt_warga', '$rw_warga', '$agama_warga', '$pendidikan_terakhir_warga', '$pekerjaan_warga', '$status_perkawinan_warga', '$status_warga', '$id_user', CURRENT_TIMESTAMP, '0000-00-00 00:00:00.000000');";
+$query = "INSERT INTO warga (id_warga, nik_warga, password, nama_warga, tempat_lahir_warga, tanggal_lahir_warga, jenis_kelamin_warga, alamat_ktp_warga, alamat_warga, desa_kelurahan_warga, kecamatan_warga, kabupaten_kota_warga, provinsi_warga, negara_warga, rt_warga, rw_warga, agama_warga, pendidikan_terakhir_warga, pekerjaan_warga, status_perkawinan_warga, status_warga, id_user, created_at, updated_at) VALUES (NULL, '$nik_warga', '$password', '$nama_warga', '$tempat_lahir_warga', '$tanggal_lahir_warga', '$jenis_kelamin_warga', '$alamat_ktp_warga', '$alamat_warga', '$desa_kelurahan_warga', '$kecamatan_warga', '$kabupaten_kota_warga', '$provinsi_warga', '$negara_warga', '$rt_warga', '$rw_warga', '$agama_warga', '$pendidikan_terakhir_warga', '$pekerjaan_warga', '$status_perkawinan_warga', '$status_warga', '$id_user', CURRENT_TIMESTAMP, '0000-00-00 00:00:00.000000');";
 
 $hasil = mysqli_query($db, $query);
 

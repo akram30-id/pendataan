@@ -61,7 +61,7 @@
                   <a href="edit.php?id_warga=<?php echo $warga['id_warga'] ?>"><i class="glyphicon glyphicon-edit"></i> Ubah</a>
                 </li>
                 <li>
-                  <a href="../mutasi/create.php?id_warga=<?php echo $warga['id_warga'] ?>"><i class="glyphicon glyphicon-export"></i> Mutasi</a>
+                  <a href="../pindah/create.php?id_warga=<?php echo $warga['id_warga'] ?>"><i class="glyphicon glyphicon-export"></i>Warga Pindah</a>
                 </li>
                 <li class="divider"></li>
                 <li>
@@ -83,7 +83,10 @@
 <div class="well">
   <dl class="dl-horizontal">
     <dt>Total Warga</dt>
-    <dd><?php echo $jumlah_warga['total'] ?> orang</dd>
+    <dd><?= $jumlah_warga['total'] ?> orang</dd>
+
+    <dt>Total Meninggal</dt>
+    <dd><?= $jumlah_meninggal['total'] ?> orang</dd>
 
     <dt>Jumlah Laki-laki</dt>
     <dd><?php echo $jumlah_warga_l['total'] ?> orang</dd>

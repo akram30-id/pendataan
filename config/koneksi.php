@@ -7,4 +7,5 @@ $user = "root";
 $pass = "";
 $database = "db_warga";
 
+// KONEK KE MYSQL
 $db = mysqli_connect($host, $user, $pass, $database) or die("gagal koneksi ke database");
