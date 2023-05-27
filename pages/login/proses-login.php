@@ -25,6 +25,7 @@ if ($data_user != null) {
   $_SESSION['user']['id_user'] = $data_warga['id_warga'];
   $_SESSION['user']['nama_user'] = $data_warga['nama_warga'];
   $_SESSION['user']['nik_user'] = $data_warga['nik_warga'];
+  $_SESSION['user']['tgl_lahir_user'] = $data_warga['tanggal_lahir_warga'];
   $_SESSION['user']['status_user'] = 'Warga';
   header('Location: ../dasbor');
 } else {

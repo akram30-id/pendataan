@@ -10,7 +10,7 @@ include('../../config/koneksi.php');
 
 // ambil data dari form
 $nik_warga = htmlspecialchars($_POST['nik_warga']);
-$password = md5(htmlspecialchars($_POST['nik_warga']));
+$password = md5($_POST['nik_warga']);
 $nama_warga = htmlspecialchars($_POST['nama_warga']);
 $tempat_lahir_warga = htmlspecialchars($_POST['tempat_lahir_warga']);
 $tanggal_lahir_warga = htmlspecialchars($_POST['tanggal_lahir_warga']);

@@ -29,7 +29,7 @@ include('../../config/env.php');
             <td><?php echo $nomor++ ?>.</td>
             <td><?php echo $data['nama_warga'] ?></td>
             <td><?php echo $data['nik_warga'] ?></td>
-            <td><?php echo $data['tempat_lahir_warga'] . ", " . date('d', strtotime($data['created_at'])) . " " . month(date('n', strtotime($data['created_at']))) . " " . date('Y', strtotime($data['created_at'])) ?></td>
+            <td><?php echo $data['tempat_lahir_warga'] . ", " . date('j', strtotime($data['tanggal_lahir_warga'])) . " " . month(date('n', strtotime($data['tanggal_lahir_warga']))) . " " . date('Y', strtotime($data['tanggal_lahir_warga'])) ?></td>
             <td><?= $data['jenis_kelamin_warga'] == "L" ? "Laki-Laki" : "Perempuan"; ?></td>
             <td><?= $data['alamat_warga'] ?></td>
             <td><?= $data['ttd_kades'] == NULL ? "Belum Approve" : "Sudah Approve"; ?></td>

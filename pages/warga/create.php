@@ -9,7 +9,7 @@
     <tr>
       <th width="20%">NIK</th>
       <td width="1%">:</td>
-      <td><input type="text" class="form-control" name="nik_warga" required></td>
+      <td><input type="number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" maxlength="16" class="form-control" name="nik_warga" required></td>
     </tr>
     <tr>
       <th>Nama Warga</th>

@@ -1,10 +1,17 @@
+<?php 
+// var_dump($_SESSION['user']);
+// die();
+
+?>
+
+
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="row">
       <?php if ($_SESSION['user']['status_user'] !== 'Warga') { ?>
       <?php } else { ?>
         <div class="col-md-2">
-          <a href="#" class="btn btn-primary" onclick="tambah(<?= $res[0]['id_warga'] ?>, <?= date('Y', strtotime($res[0]['tanggal_lahir_warga'])) ?>)">
+          <a href="#" class="btn btn-primary" onclick="tambah(<?= $_SESSION['user']['id_user'] ?>, <?= $_SESSION['user']['tgl_lahir_user'] ?>)">
             <i class="glyphicon glyphicon-file"></i> Tambah
           </a>
         </div>

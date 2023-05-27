@@ -74,8 +74,6 @@
         <select name="rt_user" class="form-control">
           <option value="001">001</option>
           <option value="002">002</option>
-          <option value="003">003</option>
-          <option value="004">004</option>
         </select>
       </td>
     </tr>
@@ -87,8 +85,6 @@
           <option value="001">001</option>
           <option value="002">002</option>
           <option value="003">003</option>
-          <option value="004">004</option>
-          <option value="005">005</option>
         </select>
       </td>
     </tr>
