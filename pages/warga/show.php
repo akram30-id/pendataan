@@ -4,6 +4,7 @@
 <?php include('_partials/menu.php') ?>
 
 <?php include('data-show.php') ?>
+<?php include('../../config/env.php') ?>
 
 <h3>A. Data Pribadi</h3>
 <table class="table table-striped">
@@ -26,13 +27,23 @@
     <th>Tanggal Lahir</th>
     <td>:</td>
     <td>
-      <?php echo ($data_warga[0]['tanggal_lahir_warga'] != '0000-00-00') ? date('d-m-Y', strtotime($data_warga[0]['tanggal_lahir_warga'])) : ''?>
+      <?php echo date('j', strtotime($data_warga[0]['tanggal_lahir_warga'])) . ' ' . month(date('n', strtotime($data_warga[0]['tanggal_lahir_warga']))) . ' ' . date('Y', strtotime($data_warga[0]['tanggal_lahir_warga']))?>
     </td>
   </tr>
   <tr>
     <th>Jenis Kelamin</th>
     <td>:</td>
-    <td><?php echo $data_warga[0]['jenis_kelamin_warga'] ?></td>
+    <td><?php echo $data_warga[0]['jenis_kelamin_warga'] == 'P' ? 'Perempuan' : 'Laki-Laki' ?></td>
+  </tr>
+  <tr>
+    <th>Kewarganegaraan</th>
+    <td>:</td>
+    <td><?php echo $data_warga[0]['negara_warga'] ?></td>
+  </tr>
+  <tr>
+    <th>Status Inputan</th>
+    <td>:</td>
+    <td><?php echo $data_warga[0]['status_inputan'] ?></td>
   </tr>
 </table>
 
@@ -47,6 +58,11 @@
     <th>Alamat</th>
     <td>:</td>
     <td><?php echo $data_warga[0]['alamat_warga'] ?></td>
+  </tr>
+  <tr>
+    <th>Dusun</th>
+    <td>:</td>
+    <td><?php echo $data_warga[0]['dusun'] ?></td>
   </tr>
   <tr>
     <th>Desa/Kelurahan</th>
@@ -67,11 +83,6 @@
     <th>Provinsi</th>
     <td>:</td>
     <td><?php echo $data_warga[0]['provinsi_warga'] ?></td>
-  </tr>
-  <tr>
-    <th>Negara</th>
-    <td>:</td>
-    <td><?php echo $data_warga[0]['negara_warga'] ?></td>
   </tr>
   <tr>
     <th>RT</th>

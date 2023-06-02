@@ -37,6 +37,22 @@
         </select>
       </td>
     </tr>
+    <tr>
+      <th>Kewarganegaraan</th>
+      <td>:</td>
+      <td><input type="text" placeholder="Contoh: Indonesia" class="form-control" name="negara_warga"></td>
+    </tr>
+    <tr>
+      <th>Status Inputan</th>
+      <td>:</td>
+      <td>
+        <select class="form-control selectpicker" name="status_inputan" required>
+          <option value="" selected disabled>- pilih -</option>
+          <option value="Lahir">Lahir</option>
+          <option value="Pendatang">Pendatang</option>
+        </select>
+      </td>
+    </tr>
   </table>
 
   <h3>B. Data Alamat</h3>
@@ -52,29 +68,37 @@
       <td><textarea class="form-control" name="alamat_warga" required></textarea></td>
     </tr>
     <tr>
+    <tr>
+      <th>Dusun</th>
+      <td>:</td>
+      <td>
+        <select class="form-control selectpicker" name="dusun" required>
+          <option value="" selected disabled>- pilih -</option>
+          <option value="Dusun I">Dusun I</option>
+          <option value="Dusun II">Dusun II</option>
+          <option value="Dusun III">Dusun III</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
       <th>Desa/Kelurahan</th>
       <td>:</td>
-      <td><input type="text" class="form-control" name="desa_kelurahan_warga"></td>
+      <td><input type="text" class="form-control" value="Tetehosi Sorowi" name="desa_kelurahan_warga"></td>
     </tr>
     <tr>
       <th>Kecamatan</th>
       <td>:</td>
-      <td><input type="text" class="form-control" name="kecamatan_warga"></td>
+      <td><input type="text" class="form-control" value="Lahewa Timur" name="kecamatan_warga"></td>
     </tr>
     <tr>
       <th>Kabupaten/Kota</th>
       <td>:</td>
-      <td><input type="text" class="form-control" name="kabupaten_kota_warga"></td>
+      <td><input type="text" class="form-control" value="Kabupaten Nias Utara" name="kabupaten_kota_warga"></td>
     </tr>
     <tr>
       <th>Provinsi</th>
       <td>:</td>
-      <td><input type="text" class="form-control" name="provinsi_warga"></td>
-    </tr>
-    <tr>
-      <th>Negara</th>
-      <td>:</td>
-      <td><input type="text" class="form-control" name="negara_warga"></td>
+      <td><input type="text" class="form-control" value="Sumatera Utara" name="provinsi_warga"></td>
     </tr>
     <tr>
       <th>RT</th>

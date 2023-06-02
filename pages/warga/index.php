@@ -18,7 +18,8 @@
       <th>Pendidikan</th>
       <th>Pekerjaan</th>
       <th>Kawin</th>
-      <th>Status</th>
+      <th>Status Tinggal</th>
+      <th>Status Input</th>
       <th>Aksi</th>
     </tr>
   </thead>
@@ -42,6 +43,7 @@
         <td><?php echo $warga['pekerjaan_warga'] ?></td>
         <td><?php echo $warga['status_perkawinan_warga'] ?></td>
         <td><?php echo $warga['status_warga'] ?></td>
+        <td><?php echo $warga['status_inputan'] ?></td>
         <td>
           <!-- Single button -->
           <div class="btn-group pull-right">
