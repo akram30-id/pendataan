@@ -16,7 +16,7 @@
       </div>
       <?php if ($_SESSION['user']['status_user'] == 'Admin') { ?>
         <div class="col-md-2">
-          <a href="../pindah/cetak-index.php" class="btn btn-primary" target="_blank">
+          <a href="../rekap/cetak-index.php" class="btn btn-primary" target="_blank">
             <i class="glyphicon glyphicon-print"></i> Cetak
           </a>
         </div>
