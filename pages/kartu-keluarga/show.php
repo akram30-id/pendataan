@@ -83,7 +83,7 @@
   <tr>
     <th>Diinput</th>
     <td>:</td>
-    <td><?php echo $data_keluarga[0]['created_at'] ?></td>
+    <td><?php echo $data_keluarga[0]['kk_created'] ?></td>
   </tr>
   <tr>
     <th>Diperbaharui</th>

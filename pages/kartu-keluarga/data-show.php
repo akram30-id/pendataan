@@ -5,7 +5,7 @@ include('../../config/koneksi.php');
 $get_id_keluarga = $_GET['id_keluarga'];
 
 // ambil dari database
-$query = "SELECT * FROM kartu_keluarga LEFT JOIN warga ON kartu_keluarga.id_kepala_keluarga = warga.id_warga WHERE id_keluarga = $get_id_keluarga";
+$query = "SELECT *, kartu_keluarga.created_at AS kk_created FROM kartu_keluarga LEFT JOIN warga ON kartu_keluarga.id_kepala_keluarga = warga.id_warga WHERE id_keluarga = $get_id_keluarga";
 
 $hasil = mysqli_query($db, $query);
 
