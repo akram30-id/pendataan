@@ -42,17 +42,6 @@
       <td>:</td>
       <td><input type="text" placeholder="Contoh: Indonesia" class="form-control" name="negara_warga"></td>
     </tr>
-    <tr>
-      <th>Status Inputan</th>
-      <td>:</td>
-      <td>
-        <select class="form-control selectpicker" name="status_inputan" required>
-          <option value="" selected disabled>- pilih -</option>
-          <option value="Lahir">Lahir</option>
-          <option value="Pendatang">Pendatang</option>
-        </select>
-      </td>
-    </tr>
   </table>
 
   <h3>B. Data Alamat</h3>

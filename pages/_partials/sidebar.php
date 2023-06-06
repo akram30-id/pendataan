@@ -28,11 +28,7 @@ function is_active($page)
     <li class="<?php is_active('mortalitas'); ?>">
       <a href="../mortalitas"><i class="glyphicon glyphicon-remove"></i> Data Mortalitas</a>
     </li>
-
-    <li class="<?php is_active('rekap'); ?>">
-      <a href="../rekap"><i class="glyphicon glyphicon-print"></i> Rekapitulasi Data</a>
-    </li>
-
+    
     <hr>
 
     <li class="<?php is_active('pengantar'); ?>">
