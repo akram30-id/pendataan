@@ -40,11 +40,6 @@
     <td>:</td>
     <td><?php echo $data_warga[0]['negara_warga'] ?></td>
   </tr>
-  <tr>
-    <th>Status Inputan</th>
-    <td>:</td>
-    <td><?php echo $data_warga[0]['status_inputan'] ?></td>
-  </tr>
 </table>
 
 <h3>B. Data Alamat</h3>
