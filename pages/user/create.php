@@ -57,27 +57,27 @@
     <tr>
       <th width="20%">Desa</th>
       <td width="1%">:</td>
-      <td><input type="text" class="form-control" name="desa_kelurahan_user" disabled value="Tetehosi Sorowi"></td>
+      <td><input type="text" class="form-control" name="desa_kelurahan_user" readonly value="Tetehosi Sorowi"></td>
     </tr>
     <tr>
       <th>Kecamatan</th>
       <td>:</td>
-      <td><input type="text" class="form-control" name="kecamatan_user" disabled value="Lahewa Timur"></td>
+      <td><input type="text" class="form-control" name="kecamatan_user" readonly value="Lahewa Timur"></td>
     </tr>
     <tr>
       <th>Kabupaten/Kota</th>
       <td>:</td>
-      <td><input type="text" class="form-control" name="kabupaten_kota_user" disabled value="Nias Utara"></td>
+      <td><input type="text" class="form-control" name="kabupaten_kota_user" readonly value="Nias Utara"></td>
     </tr>
     <tr>
       <th>Provinsi</th>
       <td>:</td>
-      <td><input type="text" class="form-control" name="provinsi_user" disabled value="Sumatera Utara"></td>
+      <td><input type="text" class="form-control" name="provinsi_user" readonly value="Sumatera Utara"></td>
     </tr>
     <tr>
       <th>Negara</th>
       <td>:</td>
-      <td><input type="text" class="form-control" name="negara_user" disabled value="Indonesia"></td>
+      <td><input type="text" class="form-control" name="negara_user" readonly value="Indonesia"></td>
     </tr>
     <tr>
       <th>RT</th>

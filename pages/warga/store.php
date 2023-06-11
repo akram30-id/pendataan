@@ -18,14 +18,14 @@ $jenis_kelamin_warga = htmlspecialchars($_POST['jenis_kelamin_warga']);
 
 $alamat_ktp_warga = htmlspecialchars($_POST['alamat_ktp_warga']);
 $alamat_warga = htmlspecialchars($_POST['alamat_warga']);
-$dusun = htmlspecialchars($_POST['dusun']);
+$dusun = htmlspecialchars($_POST['dusun_warga']);
 $desa_kelurahan_warga = htmlspecialchars($_POST['desa_kelurahan_warga']);
 $kecamatan_warga = htmlspecialchars($_POST['kecamatan_warga']);
 $kabupaten_kota_warga = htmlspecialchars($_POST['kabupaten_kota_warga']);
 $provinsi_warga = htmlspecialchars($_POST['provinsi_warga']);
 $negara_warga = htmlspecialchars($_POST['negara_warga']);
-$rt_warga = htmlspecialchars($_POST['rt_user']);
-$rw_warga = htmlspecialchars($_POST['rw_user']);
+$rt_warga = htmlspecialchars($_POST['rt_warga']);
+$rw_warga = htmlspecialchars($_POST['rw_warga']);
 
 $agama_warga = htmlspecialchars($_POST['agama_warga']);
 $pendidikan_terakhir_warga = htmlspecialchars($_POST['pendidikan_terakhir_warga']);

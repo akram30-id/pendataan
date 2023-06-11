@@ -3,7 +3,7 @@
 <h1 class="page-header">Data Warga</h1>
 <?php include('_partials/menu.php') ?>
 
-<form action="store.php" method="post">
+<form action="store.php" method="POST">
   <h3>A. Data Pribadi</h3>
   <table class="table table-striped table-middle">
     <tr>
@@ -61,71 +61,71 @@
       <th>Dusun</th>
       <td>:</td>
       <td>
-        <?php $selectDusun = ['Dusun I', 'Dusun II', 'Dusun III']; ?>
-        <select class="form-control selectpicker" name="dusun" required>
-          <option value="" selected disabled>- pilih -</option>
-          <?php foreach ($selectDusun as $d) { ?>
-            <option <?php if (isset($_SESSION['user']['dusun'])) {
-                      if ($_SESSION['user']['dusun'] == $d) {
-                        echo 'selected="selected"';
-                      }
-                    } ?> value="<?= $d ?>" disabled><?= $d ?></option>
-          <?php } ?>
-        </select>
+        <?php if ($_SESSION['user']['status_user'] == 'Admin') { ?>
+          <?php $dusun = ['Dusun I', 'Dusun II', 'Dusun III'] ?>
+          <select name="dusun_warga" class="form-control">
+            <option value="" selected disabled>- pilih -</option>
+            <?php foreach ($dusun as $d) { ?>
+              <option value="<?= $d ?>"><?= $d ?></option>
+            <?php } ?>
+          </select>
+        <?php } else { ?>
+          <input type="text" class="form-control" value="<?= $_SESSION['user']['dusun'] ?>" name="dusun_warga" readonly>
+        <?php } ?>
       </td>
     </tr>
     <tr>
       <th>Desa/Kelurahan</th>
       <td>:</td>
-      <td><input type="text" class="form-control" value="Tetehosi Sorowi" name="desa_kelurahan_warga"></td>
+      <td><input type="text" class="form-control" value="Tetehosi Sorowi" name="desa_kelurahan_warga" readonly></td>
     </tr>
     <tr>
       <th>Kecamatan</th>
       <td>:</td>
-      <td><input type="text" class="form-control" value="Lahewa Timur" name="kecamatan_warga"></td>
+      <td><input type="text" class="form-control" value="Lahewa Timur" name="kecamatan_warga" readonly></td>
     </tr>
     <tr>
       <th>Kabupaten/Kota</th>
       <td>:</td>
-      <td><input type="text" class="form-control" value="Kabupaten Nias Utara" name="kabupaten_kota_warga"></td>
+      <td><input type="text" class="form-control" value="Kabupaten Nias Utara" name="kabupaten_kota_warga" readonly></td>
     </tr>
     <tr>
       <th>Provinsi</th>
       <td>:</td>
-      <td><input type="text" class="form-control" value="Sumatera Utara" name="provinsi_warga"></td>
+      <td><input type="text" class="form-control" value="Sumatera Utara" name="provinsi_warga" readonly></td>
     </tr>
     <tr>
       <th>RT</th>
       <td>:</td>
       <td>
-        <?php $selectRT = ['001', '002'] ?>
-        <select name="rt_user" class="form-control">
-          <?php foreach ($selectRT as $rt) { ?>
-            <option <?php if ($_SESSION['user']['status_user'] == 'RT') {
-                      if ($_SESSION['user']['rt_user'] == $rt) {
-                        echo 'selected="selected"';
-                        echo 'disabled';
-                      }
-                    }?> value="<?= $rt ?>"><?= $rt ?></option>
-          <?php } ?>
-        </select>
+        <?php if ($_SESSION['user']['status_user'] == 'Admin') { ?>
+          <?php $rt = ['001', '002'] ?>
+          <select name="rt_warga" class="form-control">
+            <option value="" selected disabled>- pilih -</option>
+            <?php foreach ($rt as $r) { ?>
+              <option value="<?= $r ?>"><?= $r ?></option>
+            <?php } ?>
+          </select>
+        <?php } else { ?>
+          <input type="text" class="form-control" value="<?= $_SESSION['user']['rt_user'] ?>" name="rt_warga" readonly>
+        <?php } ?>
       </td>
     </tr>
     <tr>
       <th>RW</th>
       <td>:</td>
       <td>
-        <?php $selectRW = ['001', '002', '003'] ?>
-        <select name="rw_user" class="form-control">
-          <?php foreach ($selectRW as $rw) { ?>
-            <option <?php if ($_SESSION['user']['status_user'] == 'RT' || $_SESSION['user']['status_user'] == 'RW') {
-                      if ($_SESSION['user']['rw_user'] == $rw) {
-                        echo 'selected="selected"';
-                        echo 'disabled';
-                      }
-                    } ?> value="<?= $rw ?>"><?= $rw ?></option>
-          <?php } ?>
-        </select>
+        <?php if ($_SESSION['user']['status_user'] == 'Admin') { ?>
+          <?php $rw = ['001', '002', '003'] ?>
+          <select name="rw_warga" class="form-control">
+            <option value="" selected disabled>- pilih -</option>
+            <?php foreach ($rw as $rw) { ?>
+              <option value="<?= $rw ?>"><?= $rw ?></option>
+            <?php } ?>
+          </select>
+        <?php } else { ?>
+          <input type="text" class="form-control" value="<?= $_SESSION['user']['rw_user'] ?>" name="rw_warga" readonly>
+        <?php } ?>
       </td>
     </tr>
   </table>
@@ -137,7 +137,7 @@
       <td width="1%">:</td>
       <td>
         <select class="form-control selectlive" name="agama_warga" required>
-          <option value="" selected disabled>- pilih -</option>
+          <option value="" selected readonly>- pilih -</option>
           <option value="Islam">Islam</option>
           <option value="Kristen">Kristen</option>
           <option value="Katholik">Katholik</option>
@@ -152,7 +152,7 @@
       <td>:</td>
       <td>
         <select class="form-control selectlive" name="pendidikan_terakhir_warga" required>
-          <option value="" selected disabled>- pilih -</option>
+          <option value="" selected readonly>- pilih -</option>
           <option value="Tidak Sekolah">Tidak Sekolah</option>
           <option value="Tidak Tamat SD">Tidak Tamat SD</option>
           <option value="SD">SD</option>
@@ -177,7 +177,7 @@
       <td>:</td>
       <td>
         <select class="form-control selectpicker" name="status_perkawinan_warga" required>
-          <option value="" selected disabled>- pilih -</option>
+          <option value="" selected readonly>- pilih -</option>
           <option value="Kawin">Kawin</option>
           <option value="Tidak Kawin">Tidak Kawin</option>
         </select>
@@ -188,7 +188,7 @@
       <td>:</td>
       <td>
         <select class="form-control selectpicker" name="status_warga" required>
-          <option value="" selected disabled>- pilih -</option>
+          <option value="" selected readonly>- pilih -</option>
           <option value="Tetap">Tetap</option>
           <option value="Kontrak">Kontrak</option>
         </select>
