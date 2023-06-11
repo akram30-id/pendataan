@@ -44,7 +44,7 @@
           <option value="" selected disabled>- pilih -</option>
           <option value="Dusun I">Dusun I</option>
           <option value="Dusun II">Dusun II</option>
-          <option value="Dusun III">Dusun I<II /option>
+          <option value="Dusun III">Dusun III<II /option>
         </select>
       </td>
     </tr>

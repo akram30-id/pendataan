@@ -64,9 +64,6 @@ function is_active($page)
     <li class="<?php is_active('kartu-keluarga'); ?>">
       <a href="../kartu-keluarga"><i class="glyphicon glyphicon-inbox"></i> Data Kartu Keluarga</a>
     </li>
-    <li class="<?php is_active('mutasi'); ?>">
-      <a href="../mutasi"><i class="glyphicon glyphicon-export"></i> Data Mutasi</a>
-    </li>
     <li class="<?php is_active('mortalitas'); ?>">
       <a href="../mortalitas"><i class="glyphicon glyphicon-remove"></i> Data Mortalitas</a>
     </li>
