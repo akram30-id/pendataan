@@ -55,11 +55,6 @@
     <td><?php echo $data_warga[0]['alamat_warga'] ?></td>
   </tr>
   <tr>
-    <th>Dusun</th>
-    <td>:</td>
-    <td><?php echo $data_warga[0]['dusun'] ?></td>
-  </tr>
-  <tr>
     <th>Desa/Kelurahan</th>
     <td>:</td>
     <td><?php echo $data_warga[0]['desa_kelurahan_warga'] ?></td>

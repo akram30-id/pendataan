@@ -58,13 +58,6 @@
       <td><textarea class="form-control" name="alamat_warga"><?php echo $data_warga[0]['alamat_warga'] ?></textarea></td>
     </tr>
     <tr>
-      <th>Dusun</th>
-      <td>:</td>
-      <td>
-        <input type="text" disabled class="form-control" name="dusun_warga" value="<?php echo $data_warga[0]['dusun'] ?>">
-      </td>
-    </tr>
-    <tr>
       <th>Desa/Kelurahan</th>
       <td>:</td>
       <td><input type="text" class="form-control" name="desa_kelurahan_warga" value="<?php echo $data_warga[0]['desa_kelurahan_warga'] ?>"></td>

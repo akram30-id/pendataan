@@ -5,16 +5,14 @@ include('../../config/koneksi.php');
 if ($_SESSION['user']['status_user'] == 'RT') {
   $rt = $_SESSION['user']['rt_user'];
   $rw = $_SESSION['user']['rw_user'];
-  $dusun = $_SESSION['user']['dusun'];
 
   // ambil dari database
-  $query = "SELECT *, TIMESTAMPDIFF(YEAR, `tanggal_lahir_warga`, CURDATE()) AS usia_warga FROM warga WHERE rt_warga='$rt' AND rw_warga='$rw' AND dusun='$dusun'";
+  $query = "SELECT *, TIMESTAMPDIFF(YEAR, `tanggal_lahir_warga`, CURDATE()) AS usia_warga FROM warga WHERE rt_warga='$rt' AND rw_warga='$rw'";
 } else if ($_SESSION['user']['status_user'] == 'RW') {
   $rw = $_SESSION['user']['rw_user'];
-  $dusun = $_SESSION['user']['dusun'];
 
   // ambil dari database
-  $query = "SELECT *, TIMESTAMPDIFF(YEAR, `tanggal_lahir_warga`, CURDATE()) AS usia_warga FROM warga WHERE rw_warga='$rw' AND dusun='$dusun'";
+  $query = "SELECT *, TIMESTAMPDIFF(YEAR, `tanggal_lahir_warga`, CURDATE()) AS usia_warga FROM warga WHERE rw_warga='$rw'";
 } else {
   // ambil dari database
   $query = "SELECT *, TIMESTAMPDIFF(YEAR, `tanggal_lahir_warga`, CURDATE()) AS usia_warga FROM warga";

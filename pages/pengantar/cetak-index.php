@@ -56,7 +56,7 @@ while ($row = mysqli_fetch_assoc($hasil)) {
         </tr>
         <tr>
             <td>
-                <p style="text-align: center;">RT 004 RW 002 Dusun II, Tetehosi Sorowi, Kec. Lahewa Tim., Kabupaten Nias Utara, Sumatera Utara 22851</p>
+                <p style="text-align: center;">Desa Tetehosi Sorowi, Kec. Lahewa Tim., Kabupaten Nias Utara, Sumatera Utara 22851</p>
             </td>
         </tr>
     </table>

@@ -58,23 +58,6 @@
     </tr>
     <tr>
     <tr>
-      <th>Dusun</th>
-      <td>:</td>
-      <td>
-        <?php if ($_SESSION['user']['status_user'] == 'Admin') { ?>
-          <?php $dusun = ['Dusun I', 'Dusun II', 'Dusun III'] ?>
-          <select name="dusun_warga" class="form-control">
-            <option value="" selected disabled>- pilih -</option>
-            <?php foreach ($dusun as $d) { ?>
-              <option value="<?= $d ?>"><?= $d ?></option>
-            <?php } ?>
-          </select>
-        <?php } else { ?>
-          <input type="text" class="form-control" value="<?= $_SESSION['user']['dusun'] ?>" name="dusun_warga" readonly>
-        <?php } ?>
-      </td>
-    </tr>
-    <tr>
       <th>Desa/Kelurahan</th>
       <td>:</td>
       <td><input type="text" class="form-control" value="Tetehosi Sorowi" name="desa_kelurahan_warga" readonly></td>

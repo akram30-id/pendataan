@@ -37,18 +37,6 @@
       <td><textarea class="form-control" name="alamat_keluarga"></textarea></td>
     </tr>
     <tr>
-      <th>Dusun</th>
-      <td>:</td>
-      <td>
-        <select class="form-control selectpicker" name="dusun" required>
-          <option value="" selected disabled>- pilih -</option>
-          <option value="Dusun I">Dusun I</option>
-          <option value="Dusun II">Dusun II</option>
-          <option value="Dusun III">Dusun III<II /option>
-        </select>
-      </td>
-    </tr>
-    <tr>
       <th>Desa/Kelurahan</th>
       <td>:</td>
       <td><input type="text" class="form-control" name="desa_kelurahan_keluarga" value="Desa Tetehosi Sorowi" required></td>

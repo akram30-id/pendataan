@@ -15,7 +15,6 @@ $password_user = md5(htmlspecialchars($_POST['password_user']));
 $keterangan_user = htmlspecialchars($_POST['keterangan_user']);
 $status_user = htmlspecialchars($_POST['status_user']);
 
-$dusun_user = htmlspecialchars($_POST['dusun_user']);
 $desa_kelurahan_user = htmlspecialchars($_POST['desa_kelurahan_user']);
 $kecamatan_user = htmlspecialchars($_POST['kecamatan_user']);
 $kabupaten_kota_user = htmlspecialchars($_POST['kabupaten_kota_user']);
@@ -27,7 +26,7 @@ $rw_user = htmlspecialchars($_POST['rw_user']);
 
 // masukkan ke database
 
-$query = "INSERT INTO user (id_user, nama_user, username_user, password_user, keterangan_user, status_user, dusun, desa_kelurahan_user, kecamatan_user, kabupaten_kota_user, provinsi_user, negara_user, rt_user, rw_user, created_at, updated_at) VALUES (NULL, '$nama_user', '$username_user', '$password_user', '$keterangan_user', '$status_user', '$dusun_user', '$desa_kelurahan_user', '$kecamatan_user', '$kabupaten_kota_user', '$provinsi_user', '$negara_user', '$rt_user', '$rw_user', CURRENT_TIMESTAMP, NULL);";
+$query = "INSERT INTO user (id_user, nama_user, username_user, password_user, keterangan_user, status_user, desa_kelurahan_user, kecamatan_user, kabupaten_kota_user, provinsi_user, negara_user, rt_user, rw_user, created_at, updated_at) VALUES (NULL, '$nama_user', '$username_user', '$password_user', '$keterangan_user', '$status_user', '$desa_kelurahan_user', '$kecamatan_user', '$kabupaten_kota_user', '$provinsi_user', '$negara_user', '$rt_user', '$rw_user', CURRENT_TIMESTAMP, NULL);";
 
 $hasil = mysqli_query($db, $query);
 
