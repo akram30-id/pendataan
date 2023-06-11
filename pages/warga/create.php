@@ -61,11 +61,16 @@
       <th>Dusun</th>
       <td>:</td>
       <td>
+        <?php $selectDusun = ['Dusun I', 'Dusun II', 'Dusun III']; ?>
         <select class="form-control selectpicker" name="dusun" required>
           <option value="" selected disabled>- pilih -</option>
-          <option value="Dusun I">Dusun I</option>
-          <option value="Dusun II">Dusun II</option>
-          <option value="Dusun III">Dusun III</option>
+          <?php foreach ($selectDusun as $d) { ?>
+            <option <?php if (isset($_SESSION['user']['dusun'])) {
+                      if ($_SESSION['user']['dusun'] == $d) {
+                        echo 'selected="selected"';
+                      }
+                    } ?> value="<?= $d ?>" disabled><?= $d ?></option>
+          <?php } ?>
         </select>
       </td>
     </tr>
@@ -93,9 +98,16 @@
       <th>RT</th>
       <td>:</td>
       <td>
+        <?php $selectRT = ['001', '002'] ?>
         <select name="rt_user" class="form-control">
-          <option value="001">001</option>
-          <option value="002">002</option>
+          <?php foreach ($selectRT as $rt) { ?>
+            <option <?php if ($_SESSION['user']['status_user'] == 'RT') {
+                      if ($_SESSION['user']['rt_user'] == $rt) {
+                        echo 'selected="selected"';
+                        echo 'disabled';
+                      }
+                    }?> value="<?= $rt ?>"><?= $rt ?></option>
+          <?php } ?>
         </select>
       </td>
     </tr>
@@ -103,10 +115,16 @@
       <th>RW</th>
       <td>:</td>
       <td>
+        <?php $selectRW = ['001', '002', '003'] ?>
         <select name="rw_user" class="form-control">
-          <option value="001">001</option>
-          <option value="002">002</option>
-          <option value="003">003</option>
+          <?php foreach ($selectRW as $rw) { ?>
+            <option <?php if ($_SESSION['user']['status_user'] == 'RT' || $_SESSION['user']['status_user'] == 'RW') {
+                      if ($_SESSION['user']['rw_user'] == $rw) {
+                        echo 'selected="selected"';
+                        echo 'disabled';
+                      }
+                    } ?> value="<?= $rw ?>"><?= $rw ?></option>
+          <?php } ?>
         </select>
       </td>
     </tr>

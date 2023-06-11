@@ -43,9 +43,21 @@
   <h3>B. Data Alamat</h3>
   <table class="table table-striped table-middle">
     <tr>
-      <th width="20%">Desa/Kelurahan</th>
+      <th width="20%">Dusun</th>
       <td width="1%">:</td>
-      <td><input type="text" class="form-control" name="desa_kelurahan_user" disabled value="Dusun II Desa Tetehosi Sorowi"></td>
+      <td>
+        <select class="form-control selectpicker" id="select-role" name="dusun_user" required>
+          <option value="" selected disabled>- pilih -</option>
+          <option value="Dusun I">Dusun I</option>
+          <option value="Dusun II">Dusun II</option>
+          <option value="Dusun III">Dusun III</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th width="20%">Desa</th>
+      <td width="1%">:</td>
+      <td><input type="text" class="form-control" name="desa_kelurahan_user" disabled value="Tetehosi Sorowi"></td>
     </tr>
     <tr>
       <th>Kecamatan</th>
