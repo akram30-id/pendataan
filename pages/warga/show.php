@@ -27,7 +27,7 @@
     <th>Tanggal Lahir</th>
     <td>:</td>
     <td>
-      <?php echo date('j', strtotime($data_warga[0]['tanggal_lahir_warga'])) . ' ' . month(date('n', strtotime($data_warga[0]['tanggal_lahir_warga']))) . ' ' . date('Y', strtotime($data_warga[0]['tanggal_lahir_warga']))?>
+      <?php echo date('j', strtotime($data_warga[0]['tanggal_lahir_warga'])) . ' ' . month(date('n', strtotime($data_warga[0]['tanggal_lahir_warga'])) - 1) . ' ' . date('Y', strtotime($data_warga[0]['tanggal_lahir_warga']))?>
     </td>
   </tr>
   <tr>
